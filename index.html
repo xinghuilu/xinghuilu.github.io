@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script>
+      function RenderText() {
+        var inputValue = document.getElementById("input").value;
+        document.getElementById("renderedText").textContent = inputValue;
+        document.getElementById("renderTextButton").remove();
+        document.getElementById("input").remove();
+      }
+      function KeyboardLock() {
+        document.getElementById("instruction").remove();
+        document.getElementById("keyboardLockButton").remove();
+        navigator.keyboard.lock();
+      }
+    </script>
+  </head>
+  <body>
+    <input id="input" size="200" /><br />
+    <div id="renderedText"></div>
+    <button id="renderTextButton" onclick="RenderText()">Render Text</button>
+    <button id="keyboardLockButton" onclick="KeyboardLock()">Request Keyboard Lock</button>
+  </body>
+</html>
